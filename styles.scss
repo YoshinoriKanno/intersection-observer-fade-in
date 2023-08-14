@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  // display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // height: 100vh;
+}
+
+.item {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: opacity 0.5s, transform 0.5s;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+  height: 1200px;
+
+  // 1つ目の要素は赤色
+  &:nth-child(1) {
+    background-color: #f00;
+  }
+
+  &:nth-child(2) {
+    background-color: blue;
+  }
+
+  &:nth-child(3) {
+    background-color: green;
+  }
+}
+
+.fade {
+  will-change: opacity, transform;
+}
